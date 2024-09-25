@@ -38,3 +38,34 @@ console.log("Numbers from 1 to 5:");
 for (let i = 1; i <= 5; i++) {
     console.log(i);
 }
+
+
+
+//Functional Programming
+//Determine if a number is odd or even
+function isOddOrEven(num) {
+    return num % 2 === 0 ? "Even" : "Odd";
+}
+
+//Determine if a number is prime
+function isPrime(num) {
+    if (num <= 1) return false;
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) return false;
+    }
+    return true;
+}
+
+//Determine if a string is a palindrome
+function isPalindrome(str) {
+    const cleanedStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    return cleanedStr === cleanedStr.split('').reverse().join('');
+}
+
+//Testing the functions
+console.log(`The number ${num} is: ${checkEvenOdd(num)}`);
+console.log(`The number ${num} is: ${describeNumber(num)}`);
+console.log(`The number ${num} is: ${isOddOrEven(num)}`);
+console.log(`Is ${num} a prime number? ${isPrime(num)}`);
+console.log(`Is "racecar" a palindrome? ${isPalindrome("racecar")}`);
+console.log(`Is "hello" a palindrome? ${isPalindrome("hello")}`); 
