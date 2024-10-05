@@ -42,8 +42,12 @@ updateCardContainer() {
     });
 
     this.displayLogCount();
+} 
+     
+    countLogs() {
+    return this.loggedData.length; 
 }
-
+    
 
 
 
