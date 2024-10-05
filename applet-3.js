@@ -47,6 +47,14 @@ updateCardContainer() {
     countLogs() {
     return this.loggedData.length; 
 }
+  
+   
+    displayLogCount() {
+    const logCount = this.countLogs();
+    this.logCountElement.innerHTML = logCount;
+}
+
+
     
 
 
