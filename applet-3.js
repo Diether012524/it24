@@ -54,6 +54,14 @@ updateCardContainer() {
     this.logCountElement.innerHTML = logCount;
 }
 
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    new DataLogger('LogButton', 'cardContainer', 'clearButton', 'logCount');
+});
+
+
+
 
     
 
@@ -80,4 +88,3 @@ updateCardContainer() {
 
 
 
-}
