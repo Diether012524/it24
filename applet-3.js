@@ -14,12 +14,17 @@ class DataLogger{
     }
 
     
-loggedData() {
+    loggedData() {
     const timestamp = new Date().toLocaleDateString();
     this.loggedData.push(timestamp);
     this.updateCardConatianer();
 }
+   
+    clearLogs(){
+    this.loggedData = [];
+    this.updateCardConatianer();
 
+}
 
 
 
