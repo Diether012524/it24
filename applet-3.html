@@ -29,36 +29,34 @@
 
 
 </head>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Home</a>
+      <a class="navbar-brand" href="index.html">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Applets
+           Apps
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="applet-1.html">Applet 1</a></li>
-              <li><a class="dropdown-item" href="applet-2.html">Applet 2</a></li>
-              <li><a class="dropdown-item" href="applet-3.html">Applet 3</a></li>
+              <li><a class="dropdown-item" href="applet-1.html">Applet 1 - Basic Events </a></li>
+  
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
-</nav>
-    div class="applet-container">
+  </nav>
+  
+  <body>
+  
+    <div class="input-group input-group-lg applet-searchbar mb-4">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Type to search...">
+    </div>
+    
      <h2>Event Button Logger</h2>
 
      <h4>Total Logs:<span id="logCount">0</span></h4>
