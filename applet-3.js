@@ -13,6 +13,13 @@ class DataLogger{
     
     }
 
+    
+loggedData() {
+    const timestamp = new Date().toLocaleDateString();
+    this.loggedData.push(timestamp);
+    this.updateCardConatianer();
+}
+
 
 
 
