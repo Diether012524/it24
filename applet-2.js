@@ -78,6 +78,12 @@ class LeafletMap {
 
         this.updateLogDisplay();
     }
+    
+    displayLogCount() {      
+        this.logCountElement.innerHTML = `TEP Building Attendance: ${this.attendanceCountTEP}`;
+        this.logCount1Element.innerHTML = `CSS Building Attendance: ${this.attendanceCountCSS}`;
+        this.logCount2Element.innerHTML = `BA Building Attendance: ${this.attendanceCountBA}`;
+    }
 
   
 
