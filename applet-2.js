@@ -92,6 +92,13 @@ class LeafletMap {
         this.updateLogDisplay();
     }
 
+    
+    dataCSS() {
+        this.addMarker(8.359576, 124.869183, 'CSS Building');
+        this.attendanceCountCSS++;
+        this.updateLogDisplay();
+    }
+
   
 
 
