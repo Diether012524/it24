@@ -1,90 +1,49 @@
 class DataLogger{
-    constructor(buttonId, cardContainerId, clearButton, logCountId) {
-
-  
+    constructor(buttonId, cardContainerId, clearButtonId, logCountId){
         this.logButton = document.getElementById(buttonId);
-        this.cardContainerId = document.getElementById(cardContainerId);
-        this.clearButton = document.getElementById(clearButton);
-        this.logButton = document.getElementById(logCountId);
-        this.loggedData = [];
-    
-        this.logButton.addEventListener('click', () => this.loggedData());
-        this.clearButton.addEventListener('click', () => this.clearButton());
-    
+        this.clearButton = document.getElementById(clearButtonId);
+        this.idContainer = document.getElementById(cardContainerId);
+        this.logCountElement = document.getElementById(logCountId);
+        this.loggedData = [];     
+
+        this.logButton.addEventListener('click', () => this.logData());
+        this.clearButton.addEventListener('click', () => this.clearLogs());
     }
-
-    
-    loggedData() {
-    const timestamp = new Date().toLocaleDateString();
-    this.loggedData.push(timestamp);
-    this.updateCardConatianer();
-}
-   
+    logData(){
+        const time = new Date().toLocaleString();
+        this.loggedData.push(time);
+        this.updateCardContainer();
+    }
     clearLogs(){
-    this.loggedData = [];
-    this.updateCardConatianer();
-
-}
+        this.loggedData = []; 
+        this.updateCardContainer();
+    }
+    updateCardContainer(){
+        this.idContainer.innerHTML = '';
     
-updateCardContainer() {
-    this.cardContainerId.innerHTML = '';
-    this.loggedData.forEach(data => {
-
-        const card = document.createElement('div');
-        card.className = 'card mb-2';
-        card.innerHTML = `
-            <div class="card-body">
-                <h5 class="card-title">Logged Data</h5>
-                <p class="card-text">${data}</p>
-            </div>
-        `;
-        this.cardContainerId.appendChild(card); 
-    });
-
-    this.displayLogCount();
-} 
-     
-    countLogs() {
-    return this.loggedData.length; 
-}
-  
-   
+        this.loggedData.forEach(data => {       
+            const card = document.createElement('div');
+            card.className = 'card mb-2';
+            card.innerHTML = `
+                <div class="card-body">
+                    <h5 class="card-title">Logged Data</h5>
+                    <p class="card-text">${data}</p>
+                </div>
+            `;
+            this.idContainer.appendChild(card);
+        });
+        
+        this.displayLogCount();
+    }
+    countLogs(){
+      return this.loggedData.length;
+    }
     displayLogCount() {
-    const logCount = this.countLogs();
-    this.logCountElement.innerHTML = logCount;
+        const logCount = this.countLogs();
+        this.logCountElement.innerHTML = `<p>Total Logs: ${logCount}</p>`; 
+    }
 }
 
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    new DataLogger('LogButton', 'cardContainer', 'clearButton', 'logCount');
-});
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    document.addEventListener('DOMContentLoaded', () => {
+    new DataLogger('logButton', 'idContainer', 'clearButton', 'logCount'); 
+    })
