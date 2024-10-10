@@ -1,19 +1,18 @@
-class studentList{
-    constructor(dataUrl){
-   
-    this.dataUrl = dataUrl;
-    this.students = [];
-    this.init();
+class StudentList {
     
-}
+    constructor(dataUrl) {
+        this.dataUrl = dataUrl;
+        this.students = [];
+        this.init();
+    }
 
     async init() {
-    await this.fetchData();
-    this.renderStudentList(this.students); 
-    this.bindSearchEvent();
-}
+        await this.fetchData();
+        this.renderStudentList(this.students); 
+        this.bindSearchEvent();
+    }
 
-     async fetchData() {
+    async fetchData() {
         try {
             const response = await fetch(this.dataUrl);
             this.students = await response.json();
@@ -22,8 +21,7 @@ class studentList{
         }
     }
 
-
-     renderStudentList(students) {
+    renderStudentList(students) {
         const studentListContainer = document.getElementById('studentList');
         studentListContainer.innerHTML = students.map(student => 
             `<button class="btn btn-primary" style="margin-top:15px; 
@@ -32,12 +30,15 @@ class studentList{
             </button><br>`
         ).join('');
     }
-    bindSearchEvent(){
-       const studentSearchBar = document.getElementById('studentSearchBar');
+
+    bindSearchEvent() {
+        const studentSearchBar = document.getElementById('studentSearchBar');
         const studentSearchListContainer = document.getElementById('studentSearchList');
+
         studentSearchBar.addEventListener('input', () => {
             this.filterStudents(studentSearchBar.value, studentSearchListContainer);
         });
+
         this.renderStudentList(this.students, studentSearchListContainer);
     }
 
@@ -52,8 +53,6 @@ class studentList{
         this.renderStudentList(filteredStudents, searchListContainer);
     }
     
-
-
-
-
 }
+
+const studentList = new StudentList('applet-4.json');
