@@ -1,0 +1,21 @@
+class studentList{
+    constructor(dataUrl){
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
