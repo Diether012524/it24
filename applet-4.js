@@ -32,6 +32,9 @@ class studentList{
             </button><br>`
         ).join('');
     }
+    bindSearchEvent(){
+     
+    }
 
 
 
