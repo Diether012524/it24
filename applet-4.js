@@ -3,6 +3,8 @@ class studentList{
    
     this.dataUrl = dataUrl;
     this.students = [];
+    this.init();
+
 
 
 
