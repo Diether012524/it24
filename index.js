@@ -24,6 +24,7 @@ class CardSearch {
             }
         });
     }
+    
 }
 
 document.addEventListener('DOMContentLoaded', () => {
