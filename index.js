@@ -6,8 +6,11 @@ class CardSearch {
         this.init();
     }
     init() {
+        this.searchInput.addEventListener('input', () => {
+            this.filterCards(this.searchInput.value);
+        });
     }
-    
+
 
 
 
