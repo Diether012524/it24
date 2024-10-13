@@ -8,63 +8,59 @@
     <title>IT24</title>
 
     <style>
-          .applet-searchbar{
+        .applet-searchbar {
             margin: 1rem auto; 
             width: 90%;
         }
         .applet-card-container {
-  display: flex;
-  background-color: DodgerBlue;
-}
+            display: flex;
+            background-color: DodgerBlue;
+        }
 
-.applet-card-container  > div {
-  background-color: #f1f1f1;
-  margin: 10px;
-  padding: 20px;
-  font-size: 30px;
-}
-
+        .applet-card-container > div {
+            background-color: #f1f1f1;
+            margin: 10px;
+            padding: 20px;
+            font-size: 30px;
+        }
     </style>
 </head>
 
 <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-           Apps
-            </a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="applet-1.html">Applet 1 - Basic Events </a></li>
-                <li><a class="dropdown-item" href="applet-2.html">Applet 2 - leaflet Map </a></li>
-                <li><a class="dropdown-item" href="applet-3.html">Applet 3 - Button Logger </a></li>
-                <li><a class="dropdown-item" href="applet-4.html">Applet 3 - Button Logger </a></li>
-
-
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Apps</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="applet-1.html">Applet 1 - Basic Events</a></li>
+                        <li><a class="dropdown-item" href="applet-2.html">Applet 2 - Leaflet Map</a></li>
+                        <li><a class="dropdown-item" href="applet-3.html">Applet 3 - Button Logger</a></li>
+                        <li><a class="dropdown-item" href="applet-4.html">Applet 4 - Dynamic Elements</a></li>
+                    </ul>
+                </li>
             </ul>
-      </div>
+        </div>
     </div>
-  </nav>
+</nav>
 
 <body>
-
-    <div class="input-group input-group-lg applet-searchbar mb-4">
-        <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
-        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" placeholder="Type to search...">
+    <div class="input-group input-group-lg input-search my-4">
+        <span class="input-group-text">Search</span>
+        <input type="text" id="cardSearch" class="form-control" placeholder="Search applets...">
     </div>
+
     <h1 class="text-center my-4">Event Driven Programming Applet</h1>
     <div class="container">
-        <div class="row">
+        <div class="row" id="cardContainer">
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-1.html">
-                   <!--<img src="#" class="card-img-top" alt="Applet 1 Image">-->     
+                        <!--<img src="#" class="card-img-top" alt="Applet 1 Image">-->     
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Applet 1 - Basic Events</h5>
@@ -77,10 +73,10 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-2.html">
-                    <!--    <img src="#" class="card-img-top" alt="Applet 2 Image">-->     
+                        <!--<img src="#" class="card-img-top" alt="Applet 2 Image">-->     
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Applet 2 - Basic Events</h5>
+                        <h5 class="card-title">Applet 2 - Leaflet Map</h5>
                         <p class="card-text">Leaflet Map in NBSC</p>
                         <a href="applet-2.html" class="btn btn-primary">Click</a>
                     </div>
@@ -90,11 +86,11 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-3.html">
-                     <!--   <img src="#" class="card-img-top" alt="Applet 3 Image">-->
+                        <!--<img src="#" class="card-img-top" alt="Applet 3 Image">-->
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Applet 3 - Basic Events</h5>
-                        <p class="card-text">Button logger and have a date and time.</p>
+                        <h5 class="card-title">Applet 3 - Button Logger</h5>
+                        <p class="card-text">Button logger with date and time.</p>
                         <a href="applet-3.html" class="btn btn-primary">Click</a>
                     </div>
                 </div>
@@ -103,7 +99,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-4.html">
-                    <!--   <img src="#" class="card-img-top" alt="Applet 4 Image">--> 
+                        <!--<img src="#" class="card-img-top" alt="Applet 4 Image">--> 
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Applet 4 - Dynamic Elements</h5>
@@ -116,12 +112,12 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-5.html">
-                     <!--  <img src="#" class="card-img-top" alt="Applet 5 Image">--> 
+                        <!--<img src="#" class="card-img-top" alt="Applet 5 Image">--> 
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Applet 5 - Basic Events</h5>
                         <p class="card-text">Short Description</p>
-                        <a href="" class="btn btn-primary">Go somewhere</a>
+                        <a href="applet-5.html" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -129,25 +125,25 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-6.html">
-                    <!--   <img src="#" class="card-img-top" alt="Applet 6 Image">--> 
+                        <!--<img src="#" class="card-img-top" alt="Applet 6 Image">--> 
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Applet 6 - Basic Events</h5>
                         <p class="card-text">Short Description</p>
-                        <a href="" class="btn btn-primary">Go somewhere</a>
+                        <a href="applet-6.html" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <a href="">
-                    <!--  <img src="#" class="card-img-top" alt="Applet 7 Image">-->  
+                    <a href="applet-7.html">
+                        <!--<img src="#" class="card-img-top" alt="Applet 7 Image">-->  
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Applet 7 - Basic Events</h5>
                         <p class="card-text">Short Description</p>
-                        <a href="" class="btn btn-primary">Go somewhere</a>
+                        <a href="applet-7.html" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -155,12 +151,12 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-8.html">
-                      <!--  <img src="#" class="card-img-top" alt="Applet 8 Image">-->
+                        <!--<img src="#" class="card-img-top" alt="Applet 8 Image">-->
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">Applet 8 - Basic Events</h5>
                         <p class="card-text">Short Description</p>
-                        <a href="" class="btn btn-primary">Go somewhere</a>
+                        <a href="applet-8.html" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
@@ -168,22 +164,18 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <a href="applet-9.html">
-                   <!--   <img src="#" class="card-img-top" alt="Applet 9 Image">-->  
+                        <!--<img src="#" class="card-img-top" alt="Applet 9 Image">-->  
                     </a>
                     <div class="card-body">
-                        <h5 class="card-title">Applet 9 - Basic Eve</h5>
+                        <h5 class="card-title">Applet 9 - Basic Events</h5>
                         <p class="card-text">Short Description</p>
-                        <a href="" class="btn btn-primary">Go somewhere</a>
+                        <a href="applet-9.html" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="index.js"></script>
 </body>
 </html>
-
-
-   
-
-   
