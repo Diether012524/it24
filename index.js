@@ -11,6 +11,7 @@ class CardSearch {
         });
     }
     filterCards(query) {
+        
         const searchTerm = query.toLowerCase();
 
         this.cards.forEach(card => {
@@ -24,7 +25,7 @@ class CardSearch {
             }
         });
     }
-    
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
