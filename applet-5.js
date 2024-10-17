@@ -30,8 +30,9 @@ class WeatherApp {
 
     
 }
-
-
+}
+class WeatherService extends WeatherApp {
+   
 
 
 
