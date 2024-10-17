@@ -97,5 +97,5 @@ async getWeatherDataByCoordinates(latitude, longitude) {
     
 
 }
-
+const apiKey = ''; 
 const weatherApp = new WeatherService(apiKey);
